@@ -25,7 +25,7 @@ The design should be able to:
 
 ### Screenshot
 
-![Project Screenshot](./images/desktop-screenshot.jpg)
+![Project Screenshot](./images/desktop_screenshot.jpg)
 
 ### Links
 
