@@ -1,0 +1,127 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+.card__info {
+  width: 170px;
+  height: 330px;
+  padding: 40px;
+}
+.card__info--sedans {
+  background-color: #e38826;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.card__info--suvs {
+  background-color: #006970;
+}
+.card__info--luxury {
+  background-color: #004241;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card__icon {
+  width: 64px;
+  height: 40px;
+}
+.card__icon--sedans {
+  background: url("../images/icon-sedans.svg") no-repeat top left;
+  background-size: 50px;
+}
+.card__icon--suvs {
+  background: url("../images/icon-suvs.svg") no-repeat top left;
+  background-size: 50px;
+}
+.card__icon--luxury {
+  background: url("../images/icon-luxury.svg") no-repeat top left;
+  background-size: 50px;
+}
+.card__heading {
+  font-family: Big Shoulders Display;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+.card__paragraph {
+  font-family: Lexend Deca;
+  font-size: 12px;
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.75);
+}
+.card__btn {
+  padding: 12px 25px;
+  background-color: #f2f2f2;
+  text-decoration: none;
+  font-family: Lexend Deca;
+  font-size: 12px;
+  border-radius: 360px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f2f2f2;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 50px;
+  transition: 0.3s;
+}
+.card__btn:hover {
+  color: #f2f2f2;
+}
+.card__btn--sedans {
+  color: #e38826;
+}
+.card__btn--sedans:hover {
+  background-color: #e38826;
+}
+.card__btn--suvs {
+  color: #006970;
+}
+.card__btn--suvs:hover {
+  background-color: #006970;
+}
+.card__btn--luxury {
+  color: #004241;
+}
+.card__btn--luxury:hover {
+  background-color: #004241;
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 20px;
+}
+.attribution .a {
+  color: #3e52a3;
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+  .card__info {
+    height: 290px;
+  }
+  .card__info--sedans {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  .card__info--luxury {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+  .card__btn {
+    margin-top: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

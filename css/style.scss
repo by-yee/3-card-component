@@ -1,0 +1,153 @@
+//Primary
+$bright_orange: hsl(31, 77%, 52%);
+$dark_cyan : hsl(184, 100%, 22%);
+$very_dark_cyan: hsl(179, 100%, 13%);
+//Neutral
+$transparent_white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$very_light_gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+
+body {
+  background-color: $very_light_gray;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+
+  &__info {
+    width: 170px;
+    height: 330px;
+    padding: 40px;
+  }
+  
+  &__info--sedans {
+    background-color: $bright_orange;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  &__info--suvs {
+    background-color: $dark_cyan;
+  }
+  
+  &__info--luxury {
+    background-color: $very_dark_cyan;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  &__icon {
+    width: 64px;
+    height: 40px;
+  }
+  
+  &__icon--sedans {
+    background: url('../images/icon-sedans.svg') no-repeat top left;
+    background-size: 50px;
+  }
+  
+  &__icon--suvs {
+    background: url('../images/icon-suvs.svg') no-repeat top left;
+    background-size: 50px;
+  }
+  
+  &__icon--luxury {
+    background: url('../images/icon-luxury.svg') no-repeat top left;
+    background-size: 50px;
+  }
+  
+  &__heading {
+    font-family: Big Shoulders Display;
+    text-transform: uppercase;
+    color: $very_light_gray;
+  }
+  
+  &__paragraph {
+    font-family: Lexend Deca;
+    font-size: 12px;
+    line-height: 1.8em;
+    color: $transparent_white;
+  }
+  
+  &__btn {
+    padding: 12px 25px;
+    background-color: $very_light_gray;
+    text-decoration: none;
+    font-family: Lexend Deca;
+    font-size: 12px;
+    border-radius: 360px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $very_light_gray;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 50px;
+    transition: 0.3s;
+  
+    &:hover {
+      color: $very_light_gray;
+    }
+  }
+  
+  &__btn--sedans {
+    color: $bright_orange;
+  
+    &:hover {
+      background-color: $bright_orange;
+    }
+  }
+  
+  &__btn--suvs {
+    color: $dark_cyan;
+  
+    &:hover {
+      background-color: $dark_cyan;
+    }
+  }
+  
+  &__btn--luxury {
+    color: $very_dark_cyan;
+  
+    &:hover {
+      background-color: $very_dark_cyan;
+    }
+  }
+}
+
+.attribution { 
+  font-size: 11px; 
+  margin-top: 20px;
+
+  .a {
+    color: hsl(228, 45%, 44%); 
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+
+    &__info {
+      height: 290px;
+    }
+    &__info--sedans {
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 0px;
+    }
+    &__info--luxury {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 8px;
+    }
+    &__btn {
+      margin-top: 10px;
+    }
+  }
+}
